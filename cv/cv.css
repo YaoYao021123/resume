@@ -84,6 +84,11 @@ body {
   background: #fff;
 }
 
+.nav-links a.nav-download {
+  font-weight: 700;
+  box-shadow: 4px 4px 0 #000;
+}
+
 .lang-toggle {
   border: 2px solid var(--ink);
   border-radius: 999px;
@@ -150,21 +155,33 @@ body {
 .hero-stage__inner {
   position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-headline {
-  max-width: 12ch;
+  max-width: 16ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hero-cta {
   display: inline-block;
   margin-bottom: 1rem;
+}
+
+.hero-eyebrow {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-graphic {
@@ -251,7 +268,8 @@ h1 {
 
 .lead {
   font-size: 1rem;
-  max-width: 54ch;
+  max-width: 64ch;
+  text-align: center;
 }
 
 .hero-tags {
@@ -259,6 +277,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  justify-content: center;
 }
 
 .hero-tags span {
