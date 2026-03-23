@@ -236,6 +236,34 @@ const initLanguage = () => {
 const initSplash = () => {
   const splash = document.getElementById("intro-splash");
   if (!splash || !window.gsap) return;
+  const title = splash.querySelector(".intro-title");
+
+  if (title) {
+    const text = title.textContent || "";
+    title.textContent = "";
+    const chars = [...text].map((ch, index) => {
+      const span = document.createElement("span");
+      span.className = "intro-char";
+      span.textContent = ch === " " ? "\u00A0" : ch;
+      span.style.display = "inline-block";
+      span.style.willChange = "transform,opacity";
+      title.appendChild(span);
+      return { span, index };
+    });
+
+    gsap.fromTo(
+      chars.map((c) => c.span),
+      { y: 20, opacity: 0, rotate: -3 },
+      {
+        y: 0,
+        opacity: 1,
+        rotate: 0,
+        duration: 0.58,
+        ease: "back.out(1.6)",
+        stagger: 0.028
+      }
+    );
+  }
 
   const tl = gsap.timeline({
     onComplete: () => splash.classList.add("hidden")
@@ -243,10 +271,10 @@ const initSplash = () => {
 
   tl.fromTo(
     ".intro-title",
-    { y: 30, opacity: 0, scale: 0.96, letterSpacing: "0.08em" },
-    { y: 0, opacity: 1, scale: 1, letterSpacing: "0.02em", duration: 0.82, ease: "power3.out" }
+    { y: 18, opacity: 1, scale: 0.98, letterSpacing: "0.05em" },
+    { y: 0, opacity: 1, scale: 1, letterSpacing: "0.01em", duration: 0.72, ease: "power3.out" }
   )
-    .to(".intro-title", { y: -3, duration: 0.22, repeat: 1, yoyo: true, ease: "power1.inOut" })
+    .to(".intro-char", { y: -3, duration: 0.18, stagger: 0.014, yoyo: true, repeat: 1, ease: "power1.inOut" })
     .to(".intro-title", { opacity: 0, scale: 1.03, duration: 0.4, ease: "power2.in" }, "+=0.2");
 };
 
