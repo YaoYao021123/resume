@@ -402,6 +402,8 @@ const initKeyboardPaging = (lenis) => {
   if (!stages.length) return;
 
   let busy = false;
+  let wheelDelta = 0;
+  let wheelResetTimer = null;
 
   const currentStageIndex = () => {
     const y = window.scrollY + window.innerHeight * 0.4;
@@ -434,10 +436,10 @@ const initKeyboardPaging = (lenis) => {
     if (canScrollInsideStage(stage, direction)) {
       const targetY = Math.max(0, window.scrollY + direction * Math.round(window.innerHeight * 0.75));
       busy = true;
-      lenis.scrollTo(targetY, { duration: 0.75, immediate: false });
+      lenis.scrollTo(targetY, { duration: 0.72, immediate: false });
       setTimeout(() => {
         busy = false;
-      }, 430);
+      }, 410);
       return;
     }
 
@@ -445,22 +447,52 @@ const initKeyboardPaging = (lenis) => {
     if (nextIndex === idx) return;
 
     busy = true;
-    lenis.scrollTo(stages[nextIndex], { offset: 0, duration: 0.92, immediate: false });
+    lenis.scrollTo(stages[nextIndex], { offset: 0, duration: 0.9, immediate: false });
     setTimeout(() => {
       busy = false;
-    }, 520);
+    }, 500);
+  };
+
+  const shouldIgnore = (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return true;
+    const active = document.activeElement;
+    if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable)) return true;
+    return false;
   };
 
   window.addEventListener("keydown", (event) => {
-    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (shouldIgnore(event)) return;
     if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
-
-    const active = document.activeElement;
-    if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable)) return;
 
     event.preventDefault();
     move(event.key === "ArrowDown" ? 1 : -1);
   });
+
+  window.addEventListener(
+    "wheel",
+    (event) => {
+      if (shouldIgnore(event)) return;
+      if (Math.abs(event.deltaY) < 1.5) return;
+
+      // Intercept wheel to create section paging (Apple-like),
+      // while still allowing chunked scrolling inside long sections.
+      event.preventDefault();
+
+      wheelDelta += event.deltaY;
+      if (wheelResetTimer) window.clearTimeout(wheelResetTimer);
+      wheelResetTimer = window.setTimeout(() => {
+        wheelDelta = 0;
+      }, 110);
+
+      if (busy) return;
+      if (Math.abs(wheelDelta) < 90) return;
+
+      const direction = wheelDelta > 0 ? 1 : -1;
+      wheelDelta = 0;
+      move(direction);
+    },
+    { passive: false, capture: true }
+  );
 };
 
 const initDynamicShapes = () => {
