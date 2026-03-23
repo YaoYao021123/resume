@@ -162,10 +162,12 @@ body {
 }
 
 .hero-headline {
-  max-width: 16ch;
+  max-width: 18ch;
   margin-left: auto;
   margin-right: auto;
   white-space: pre-line;
+  font-size: clamp(1.9rem, 3.9vw, 3rem);
+  line-height: 1.02;
 }
 
 .hero-subtitle {
@@ -488,7 +490,7 @@ h1 {
 }
 
 .logo-marquee__track img {
-  height: 34px;
+  height: 38px;
   width: auto;
   object-fit: contain;
   background: transparent !important;
@@ -496,23 +498,23 @@ h1 {
 }
 
 .logo-marquee__track img.logo--boost {
-  height: 40px;
+  height: 48px;
 }
 
 .logo-marquee__track img.logo--industrial {
-  height: 44px;
+  height: 54px;
 }
 
 .logo-marquee__track img.logo--spdb {
-  height: 44px;
+  height: 54px;
 }
 
 .logo-marquee__track img.logo--hku {
-  height: 96px;
+  height: 112px;
 }
 
 .logo-marquee__track img.logo--shu {
-  height: 40px;
+  height: 48px;
 }
 
 @keyframes logo-move {

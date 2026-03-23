@@ -393,6 +393,74 @@ const initLenis = () => {
     lenis.raf(time * 1000);
   });
   gsap.ticker.lagSmoothing(0);
+
+  initKeyboardPaging(lenis);
+};
+
+const initKeyboardPaging = (lenis) => {
+  const stages = Array.from(document.querySelectorAll(".stage"));
+  if (!stages.length) return;
+
+  let busy = false;
+
+  const currentStageIndex = () => {
+    const y = window.scrollY + window.innerHeight * 0.4;
+    for (let i = 0; i < stages.length; i += 1) {
+      const el = stages[i];
+      const top = el.offsetTop;
+      const bottom = top + el.offsetHeight;
+      if (y >= top && y <= bottom) return i;
+    }
+    return stages.length - 1;
+  };
+
+  const canScrollInsideStage = (stage, direction) => {
+    const top = stage.offsetTop;
+    const bottom = top + stage.offsetHeight;
+    const viewportTop = window.scrollY;
+    const viewportBottom = viewportTop + window.innerHeight;
+    const overflow = stage.scrollHeight > window.innerHeight + 48 || stage.offsetHeight > window.innerHeight + 48;
+    if (!overflow) return false;
+    if (direction > 0) return viewportBottom < bottom - 8;
+    return viewportTop > top + 8;
+  };
+
+  const move = (direction) => {
+    if (busy) return;
+    const idx = currentStageIndex();
+    const stage = stages[idx];
+    if (!stage) return;
+
+    if (canScrollInsideStage(stage, direction)) {
+      const targetY = Math.max(0, window.scrollY + direction * Math.round(window.innerHeight * 0.75));
+      busy = true;
+      lenis.scrollTo(targetY, { duration: 0.75, immediate: false });
+      setTimeout(() => {
+        busy = false;
+      }, 430);
+      return;
+    }
+
+    const nextIndex = Math.min(stages.length - 1, Math.max(0, idx + direction));
+    if (nextIndex === idx) return;
+
+    busy = true;
+    lenis.scrollTo(stages[nextIndex], { offset: 0, duration: 0.92, immediate: false });
+    setTimeout(() => {
+      busy = false;
+    }, 520);
+  };
+
+  window.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+
+    const active = document.activeElement;
+    if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable)) return;
+
+    event.preventDefault();
+    move(event.key === "ArrowDown" ? 1 : -1);
+  });
 };
 
 const initDynamicShapes = () => {
