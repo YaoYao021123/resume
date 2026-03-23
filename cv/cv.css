@@ -477,15 +477,31 @@ h1 {
 }
 
 .logo-marquee__track img {
-  height: 30px;
+  height: 34px;
   width: auto;
   object-fit: contain;
   background: transparent !important;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 
 .logo-marquee__track img.logo--boost {
-  height: 36px;
+  height: 40px;
+}
+
+.logo-marquee__track img.logo--industrial {
+  height: 44px;
+}
+
+.logo-marquee__track img.logo--spdb {
+  height: 44px;
+}
+
+.logo-marquee__track img.logo--hku {
+  height: 42px;
+}
+
+.logo-marquee__track img.logo--shu {
+  height: 40px;
 }
 
 @keyframes logo-move {
