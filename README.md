@@ -2,6 +2,8 @@
 
 Personal CV site inspired by `brewitty.com`, rebuilt as a lightweight static page and ready for GitHub Pages.
 
+GitHub repository: `https://github.com/YaoYao021123/resume`
+
 ## Highlights
 
 - Brewitty-like visual language: bold outline cards, pastel blocks, animated hero, wave footer.
@@ -38,6 +40,6 @@ Open:
 3. Source: `Deploy from a branch`
 4. Branch: `main`, Folder: `/(root)`
 
-After deploy, visit:
+Live site (GitHub Pages):
 
 `https://yaoyao021123.github.io/resume/`

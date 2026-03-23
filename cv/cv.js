@@ -11,10 +11,9 @@ const i18n = {
     "nav.contact": "联系",
     "nav.download": "下载附件",
     "hero.eyebrow": "Research × Strategy × AI Product",
-    "hero.title": "从研究判断到方案交付，我做“能落地”的增长工作。",
+    "hero.title": "从研究判断到方案交付\n我做“能落地”的增长工作",
     "hero.subtitle": "Structured insights, clear strategy, execution that ships.",
-    "hero.lead":
-      "我聚焦 AI ToB 场景中的产品化与商业化实践，擅长把行业洞察、用户需求与方案设计连接成完整闭环。",
+    "hero.lead": "我聚焦 AI ToB 场景中的产品化与商业化实践，擅长把行业洞察、用户需求与方案设计连接成完整闭环",
     "hero.cta": "进入简历",
     "hero.tag1": "AI 产品 / 商业化",
     "hero.tag2": "战略分析 / 解决方案",
