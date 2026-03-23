@@ -2,7 +2,7 @@
 
 Personal CV site inspired by `brewitty.com`, rebuilt as a lightweight static page and ready for GitHub Pages.
 
-GitHub repository: `https://github.com/YaoYao021123/resume`
+GitHub repository: [YaoYao021123/resume](https://github.com/YaoYao021123/resume)
 
 ## Highlights
 
@@ -40,6 +40,4 @@ Open:
 3. Source: `Deploy from a branch`
 4. Branch: `main`, Folder: `/(root)`
 
-Live site (GitHub Pages):
-
-`https://yaoyao021123.github.io/resume/`
+Live site (GitHub Pages): [https://yaoyao021123.github.io/resume/](https://yaoyao021123.github.io/resume/)
