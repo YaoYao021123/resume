@@ -260,7 +260,7 @@ const initHeroLottie = () => {
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: "../assets/hero.json"
+    path: "assets/hero.json"
   });
 
   const bombAnim = lottie.loadAnimation({
@@ -268,7 +268,7 @@ const initHeroLottie = () => {
     renderer: "svg",
     loop: false,
     autoplay: true,
-    path: "../assets/bomb.json"
+    path: "assets/bomb.json"
   });
 
   if (window.gsap && window.ScrollTrigger) {
