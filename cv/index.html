@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yao Yao | Resume</title>
+    <meta
+      name="description"
+      content="Yao Yao 的 Brewitty 风格动态简历，支持中英文切换、分屏过渡与结构化经历展示。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700;7..72,800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <div id="intro-splash" class="intro-splash">
+      <h1 class="intro-title">Yao Yao's Resume</h1>
+    </div>
+
+    <nav class="cv-nav">
+      <div class="cv-nav__inner">
+        <a class="brand" href="#hero">
+          <span>Yao Yao</span>
+        </a>
+        <div class="nav-links">
+          <a href="#education" data-i18n="nav.education">Education</a>
+          <a href="#exp-baidu" data-i18n="nav.experience">Experience</a>
+          <a href="#research-1" data-i18n="nav.research">Research</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <button id="lang-toggle" class="lang-toggle" type="button">EN</button>
+        </div>
+      </div>
+    </nav>
+    <aside class="side-toc" aria-label="Section navigation">
+      <a href="#hero" class="side-toc__dot is-active" data-target="hero"></a>
+      <a href="#education" class="side-toc__dot" data-target="education"></a>
+      <a href="#exp-baidu" class="side-toc__dot" data-target="exp-baidu"></a>
+      <a href="#exp-zhipu" class="side-toc__dot" data-target="exp-zhipu"></a>
+      <a href="#exp-fosun" class="side-toc__dot" data-target="exp-fosun"></a>
+      <a href="#exp-miracle" class="side-toc__dot" data-target="exp-miracle"></a>
+      <a href="#exp-industrial" class="side-toc__dot" data-target="exp-industrial"></a>
+      <a href="#exp-boci" class="side-toc__dot" data-target="exp-boci"></a>
+      <a href="#exp-spdb" class="side-toc__dot" data-target="exp-spdb"></a>
+      <a href="#research-1" class="side-toc__dot" data-target="research-1"></a>
+      <a href="#research-2" class="side-toc__dot" data-target="research-2"></a>
+      <a href="#contact" class="side-toc__dot" data-target="contact"></a>
+    </aside>
+
+    <main>
+      <section id="hero" class="stage stage--hero hero-stage">
+        <div class="stage__inner hero-stage__inner">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">Research × Strategy × AI Product</p>
+          <h1 class="hero-headline reveal" data-i18n="hero.title">
+            从研究判断到方案交付，我做“能落地”的增长工作。
+          </h1>
+          <p class="hero-subtitle reveal" data-i18n="hero.subtitle">
+            Structured insights, clear strategy, execution that ships.
+          </p>
+          <p class="lead reveal" data-i18n="hero.lead">
+            我聚焦 AI ToB 场景中的产品化与商业化实践，擅长把行业洞察、用户需求与方案设计连接成完整闭环。
+          </p>
+          <a href="#education" class="primary-button hero-cta reveal" data-i18n="hero.cta">Explore Resume</a>
+          <div class="hero-tags reveal">
+            <span data-i18n="hero.tag1">AI 产品 / 商业化</span>
+            <span data-i18n="hero.tag2">战略分析 / 解决方案</span>
+            <span data-i18n="hero.tag3">上海 · 深圳</span>
+          </div>
+          <div class="hero-graphic reveal">
+            <div id="hero-lottie"></div>
+          </div>
+          <div id="hero-bomb" aria-hidden="true"></div>
+        </div>
+        <div class="hero-wave-container">
+          <div class="hero-wave-track">
+            <img src="../assets/wave.svg" alt="" />
+            <img src="../assets/wave.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="logo-marquee-wrap">
+        <div class="logo-marquee">
+          <div class="logo-marquee__track">
+            <img src="assets/logos/hku.svg" alt="HKU" class="logo--boost" />
+            <img src="assets/logos/shu.svg" alt="SHU" />
+            <img src="assets/logos/baidu.svg" alt="Baidu" />
+            <img src="assets/logos/zhipu.svg" alt="Zhipu" />
+            <img src="assets/logos/fosun-health.png" alt="Fosun Health" />
+            <img src="assets/logos/miracleplus.png" alt="MiraclePlus" />
+            <img src="assets/logos/industrial-securities.png" alt="Industrial Securities" class="logo--boost" />
+            <img src="assets/logos/boci.png" alt="BOCI" />
+            <img src="assets/logos/spdb.png" alt="SPDB" class="logo--boost" />
+
+            <img src="assets/logos/hku.svg" alt="HKU" class="logo--boost" />
+            <img src="assets/logos/shu.svg" alt="SHU" />
+            <img src="assets/logos/baidu.svg" alt="Baidu" />
+            <img src="assets/logos/zhipu.svg" alt="Zhipu" />
+            <img src="assets/logos/fosun-health.png" alt="Fosun Health" />
+            <img src="assets/logos/miracleplus.png" alt="MiraclePlus" />
+            <img src="assets/logos/industrial-securities.png" alt="Industrial Securities" class="logo--boost" />
+            <img src="assets/logos/boci.png" alt="BOCI" />
+            <img src="assets/logos/spdb.png" alt="SPDB" class="logo--boost" />
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="stage stage--education stage--mint">
+        <div class="wave-container">
+          <div class="wave-track">
+            <img src="../assets/wave.svg" alt="" />
+            <img src="../assets/wave.svg" alt="" />
+          </div>
+        </div>
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="edu.title">教育经历</h2>
+
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/hku.svg" alt="HKU" /></div>
+              <div>
+                <h3 data-i18n="edu.hku.name">香港大学 · 金融科技硕士</h3>
+                <p data-i18n="edu.hku.time">2025/08 – 2026/07（在读）</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="edu.hku.p1.h">课程主线</h4>
+                <p data-i18n="edu.hku.p1.p">聚焦机器学习、深度学习、金融编程、量化交易与金融大数据分析。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="edu.hku.p2.h">学习目标</h4>
+                <p data-i18n="edu.hku.p2.p">强化“技术理解 + 业务判断”双能力，为 AI 产品与策略岗位提供扎实方法论。</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/shu.svg" alt="SHU" /></div>
+              <div>
+                <h3 data-i18n="edu.shu.name">上海大学 · 金融学本科</h3>
+                <p data-i18n="edu.shu.time">2021/09 – 2025/07</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="edu.shu.p1.h">能力底盘</h4>
+                <p data-i18n="edu.shu.p1.p">系统训练经济金融理论、实证研究方法与数据分析能力。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="edu.shu.p2.h">实践导向</h4>
+                <p data-i18n="edu.shu.p2.p">在课程与项目中持续结合行业议题，形成“问题拆解—分析—表达”的完整习惯。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-baidu" class="stage stage--sand">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp1.title">实习经历 01</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/baidu.svg" alt="Baidu" /></div>
+              <div>
+                <h3 data-i18n="exp1.name">百度智能云 · ToB 售前 AI 产品实习生</h3>
+                <p data-i18n="exp1.meta">深圳 · 制造业务组 · 2025/11 – 至今</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp1.p1.h">AI 智能硬件方案设计与交互落地</h4>
+                <p data-i18n="exp1.p1.p">面向资源受限硬件，参与轻量 SDK 与语音交互方案设计，持续优化 Prompt 与 RAG 结构，明确产品交互边界与专业输出规范。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp1.p2.h">市场研究与技术选型支持</h4>
+                <p data-i18n="exp1.p2.p">围绕 AI 硬件与基础云能力开展对标研究，形成面向售前与客户沟通可直接复用的分析材料，支持方案选择与差异化表达。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp1.p3.h">运营提效与低代码应用</h4>
+                <p data-i18n="exp1.p3.p">在复杂业务场景中推进 Prompt 逻辑结构化，结合低代码平台快速完成展示类与协作类应用落地，提升项目响应速度。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-zhipu" class="stage stage--pink">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp2.title">实习经历 02</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/zhipu.svg" alt="Zhipu" /></div>
+              <div>
+                <h3 data-i18n="exp2.name">智谱 AI · 大模型商业化实习生</h3>
+                <p data-i18n="exp2.meta">上海 · 互联网业务部 · 2025/05 – 2025/09</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp2.p1.h">产品策略与市场分析</h4>
+                <p data-i18n="exp2.p1.p">参与 MaaS 战略研究，通过市场与竞品视角识别增长机会，协助形成面向重点客户与重点行业的策略建议。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp2.p2.h">需求洞察与产品研究</h4>
+                <p data-i18n="exp2.p2.p">搭建统一研究框架，持续拆解全球标杆 AI 产品的功能逻辑、商业模式与增长路径，为路线规划提供输入。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp2.p3.h">解决方案与商业化支持</h4>
+                <p data-i18n="exp2.p3.p">结合客户需求与竞品洞察，参与场景化方案整理，补充核心功能点描述与交互表达，提高沟通效率。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-fosun" class="stage stage--paper">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp3.title">实习经历 03</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/fosun-health.png" alt="Fosun Health" /></div>
+              <div>
+                <h3 data-i18n="exp3.name">复星健康 · 战略分析实习生</h3>
+                <p data-i18n="exp3.meta">上海 · 战略规划部 · 2025/02 – 2025/05</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp3.p1.h">产品原型与效率提升</h4>
+                <p data-i18n="exp3.p1.p">通过数据抓取与知识库建设，推动政策与行业情报结构化沉淀，提升团队资料检索效率与复用能力。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp3.p2.h">公司研究与需求分析</h4>
+                <p data-i18n="exp3.p2.p">围绕上市公司与行业政策开展持续研究，构建“政策—市场—运营”分析视角，为业务讨论提供依据。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp3.p3.h">专题研究与表达输出</h4>
+                <p data-i18n="exp3.p3.p">产出跨区域专题材料，并把研究结论转化为内部可用图表与汇报内容，提升跨团队协作效率。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-miracle" class="stage stage--mint">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp4.title">实习经历 04</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/miracleplus.png" alt="MiraclePlus" /></div>
+              <div>
+                <h3 data-i18n="exp4.name">奇绩创坛（YC China）· 投资运营实习生</h3>
+                <p data-i18n="exp4.meta">上海 · 转化组 · 2024/09 – 2025/01</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp4.p1.h">用户沟通与转化推进</h4>
+                <p data-i18n="exp4.p1.p">设计并执行创业者访谈框架，深度理解项目阶段、需求与资源诉求，持续提升转化链路质量。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp4.p2.h">流程与体系建设</h4>
+                <p data-i18n="exp4.p2.p">参与 SOP 与标签体系搭建，推动项目线索状态结构化管理，增强团队协同与跟进节奏一致性。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp4.p3.h">洞察驱动的支持方案</h4>
+                <p data-i18n="exp4.p3.p">基于访谈内容输出定制化建议，帮助创业者更高效理解申请与加速流程。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-industrial" class="stage stage--sand">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp5.title">实习经历 05</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/industrial-securities.png" alt="Industrial Securities" /></div>
+              <div>
+                <h3 data-i18n="exp5.name">兴业证券 · 投行实习生（股权承做）</h3>
+                <p data-i18n="exp5.meta">上海 · 投资银行总部 · 2024/05 – 2024/08</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp5.p1.h">财务核查与底稿管理</h4>
+                <p data-i18n="exp5.p1.p">参与拟上市企业财务核查与底稿整理，协助项目组完成申报材料复核与结构化归档。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp5.p2.h">流程优化与协同支持</h4>
+                <p data-i18n="exp5.p2.p">参与跟踪模板和预审清单建设，帮助团队提高复核效率与信息一致性。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-boci" class="stage stage--paper">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp6.title">实习经历 06</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/boci.png" alt="BOCI" /></div>
+              <div>
+                <h3 data-i18n="exp6.name">中银国际证券 · 行业研究实习生</h3>
+                <p data-i18n="exp6.meta">上海 / 线上 · 电新组 · 2024/01 – 2024/04</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp6.p1.h">深度研究与报告输出</h4>
+                <p data-i18n="exp6.p1.p">围绕新能源产业链开展公司与行业研究，持续输出日报、周报和专题材料。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp6.p2.h">数据追踪与知识沉淀</h4>
+                <p data-i18n="exp6.p2.p">维护多主题行业数据底表，整理会议纪要并沉淀可复用研究方法。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="exp-spdb" class="stage stage--mint">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="exp7.title">实习经历 07</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/spdb.png" alt="SPDB" /></div>
+              <div>
+                <h3 data-i18n="exp7.name">浦发银行 · 对公客户经理助理</h3>
+                <p data-i18n="exp7.meta">上海 · 对公业务部 · 2023/08</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="exp7.p1.h">财务分析与信贷支持</h4>
+                <p data-i18n="exp7.p1.p">参与企业客户财务资料分析与贷后材料撰写，建立银行业务的基础认知。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="exp7.p2.h">业务学习与风险意识</h4>
+                <p data-i18n="exp7.p2.p">学习保函及并购流程，理解授信流程中的合规与风险控制逻辑。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="research-1" class="stage stage--sand">
+        <div class="stage__inner">
+          <h2 class="section-title reveal" data-i18n="research.title">研究经历</h2>
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/shu.svg" alt="SHU" /></div>
+              <div>
+                <h3 data-i18n="research.r1.name">房贷利率调整对房地产市场影响（实证研究）</h3>
+                <p data-i18n="research.r1.meta">2024/12 – 2025/06</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="research.r1.p1.h">数据工程</h4>
+                <p data-i18n="research.r1.p1.p">使用 Python 进行多城市房价数据抓取、清洗与月度对齐，构建可分析样本。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="research.r1.p2.h">模型分析</h4>
+                <p data-i18n="research.r1.p2.p">采用 DID 与交互模型检验利率变化对城市房价波动的影响机制。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="research-2" class="stage stage--paper">
+        <div class="stage__inner">
+          <article class="story-card reveal">
+            <header class="story-head">
+              <div class="logo-box"><img src="assets/logos/shu.svg" alt="SHU" /></div>
+              <div>
+                <h3 data-i18n="research.r2.name">产业性别结构对流动人口生育率影响（市级课题）</h3>
+                <p data-i18n="research.r2.meta">2023/11 – 2024/11</p>
+              </div>
+            </header>
+            <div class="story-points">
+              <div class="point">
+                <h4 data-i18n="research.r2.p1.h">样本构建</h4>
+                <p data-i18n="research.r2.p1.p">整合微观调查与城市统计资料，形成跨城市对比样本并完成变量标准化。</p>
+              </div>
+              <div class="point">
+                <h4 data-i18n="research.r2.p2.h">实证洞察</h4>
+                <p data-i18n="research.r2.p2.p">通过 Logistic 与交互项分析识别劳动力结构与生育决策之间的关联特征。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="stage stage--contact">
+        <div class="stage__inner">
+          <article class="story-card reveal">
+            <h2 class="section-title" data-i18n="contact.title">联系我</h2>
+            <p class="lead" data-i18n="contact.lead">如果你在寻找可以从研究走到交付的成员，欢迎联系我。</p>
+            <div class="contact-row">
+              <a class="primary-button" href="mailto:davidyaofin@163.com">davidyaofin@163.com</a>
+              <span class="chip">(+86) 18362821123</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="cv.js"></script>
+  </body>
+</html>
